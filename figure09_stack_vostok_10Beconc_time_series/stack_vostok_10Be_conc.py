@@ -54,5 +54,5 @@ ax.legend(lines+lines2, labels+labels2, ncol=2, handletextpad=0.5, fontsize=12, 
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig08_stack_vostok_10Beconc_time_series.pdf', dpi=300)
+fig.savefig(cwd+'/fig09_stack_vostok_10Beconc_time_series.pdf', dpi=300)
 

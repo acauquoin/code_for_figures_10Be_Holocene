@@ -92,5 +92,5 @@ fig.supxlabel('Depth (m)', fontsize=16, x=0.54)
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig02_10Be_data_orsay_depth.pdf', dpi=300)
+fig.savefig(cwd+'/fig03_10Be_data_orsay_depth.pdf', dpi=300)
 

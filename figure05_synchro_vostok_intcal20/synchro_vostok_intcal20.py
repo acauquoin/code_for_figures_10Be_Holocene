@@ -58,4 +58,4 @@ fig.align_ylabels()
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig04_synchro_vostok_intcal20.pdf', dpi=300)
+fig.savefig(cwd+'/fig05_synchro_vostok_intcal20.pdf', dpi=300)

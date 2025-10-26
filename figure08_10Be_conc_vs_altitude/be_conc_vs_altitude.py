@@ -140,4 +140,4 @@ ax.legend(ncol=1, handletextpad=0.2, fontsize=12, loc='upper left', borderaxespa
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig07_10Be_conc_vs_altitude.pdf', dpi=300)
+fig.savefig(cwd+'/fig08_10Be_conc_vs_altitude.pdf', dpi=300)

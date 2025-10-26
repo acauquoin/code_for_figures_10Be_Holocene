@@ -88,5 +88,5 @@ ax.legend(ncol=3, handletextpad=0.5, fontsize=12, columnspacing=1.75, loc='upper
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig03_all_10Be_conc_data_time_series.pdf', dpi=300)
+fig.savefig(cwd+'/fig04_all_10Be_conc_data_time_series.pdf', dpi=300)
 

@@ -89,37 +89,6 @@ intcal20.set_index('age', inplace=True)
 sim_C14Be.set_index('age', inplace=True)
 intcal20 = intcal20.loc[240:7100]
 
-# figure v1 (two subplots)
-fig, axs = plt.subplots(2,1, sharex=True, figsize=(12.68,  6.72), constrained_layout=True)
-intcal20["intcal20_detrended"].plot(ax=axs[0], xlim=(0,8000), ylim=(-22, 22), c='k', label='IntCal20', linewidth=2)
-sim_C14Be["C14_mean_stack"].plot(ax=axs[0], xlim=(150, 7150), ylim=(-22, 22), c='tab:red', label='Stack', linewidth=2)
-intcal20["intcal20_detrended"].plot(ax=axs[1], xlim=(150, 7150), ylim=(-22, 22), c='k', label='', linewidth=2)
-sim_C14Be["C14_vostok"].plot(ax=axs[1], xlim=(150, 7150), ylim=(-22, 22), c='dodgerblue', label='Vostok', linewidth=2)
- #
-# options of the figures
-axs[1].set_xlabel('')
-for ax in np.ravel(axs):
-    ax.set_ylabel('', fontsize=14)
-    ax.xaxis.set_tick_params(labelsize=12)
-    ax.yaxis.set_tick_params(labelsize=12)
-    ax.set_xticks(np.arange(500, 7001, 500))
-    ax.set_xticks(np.arange(200, 7101, 100), minor=True)
-    ax.grid(which='major', axis='x', linestyle='--', linewidth=0.5, color='k')
-    ax.grid(which='minor', axis='x', linestyle='--', linewidth=0.5, color='darkgrey')
-#
-# Legend
-leg = fig.legend(loc='outside upper right', ncol=3, handletextpad=0.5, fontsize=12, columnspacing=1.75, borderaxespad=0.3)
-#
-fig.supylabel('Detrended $\Delta^{14}$C (‰)', fontsize=14, y=0.515)
-fig.supxlabel('Age (yr BP)', fontsize=14, x=0.53)
-fig.align_ylabels()
-#
-# show
-plt.show()
-#
-# save
-fig.savefig(cwd+'/fig10_detrended_sim_D14C_and_intcal20_2subplots.pdf', dpi=300)
-
 
 # figure v2 (one subplot)
 fig, ax = plt.subplots(1,1, sharex=True, figsize=(12.68, 3.5), constrained_layout=True)
@@ -144,4 +113,4 @@ leg = ax.legend(loc='lower right', ncol=3, handletextpad=0.5, fontsize=12, colum
 plt.show()
 #
 # save
-fig.savefig(cwd+'/fig10_detrended_sim_D14C_and_intcal20_1subplot.pdf', dpi=300)
+fig.savefig(cwd+'/fig11_detrended_sim_D14C_and_intcal20_1subplot.pdf', dpi=300)

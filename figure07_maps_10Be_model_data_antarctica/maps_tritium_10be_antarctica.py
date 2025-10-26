@@ -193,4 +193,4 @@ cbar.set_label('$\mathsf{^{10}Be\ flux}$ (at.m$^{-2}$.s$^{-1}$)', size=14, label
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig06_maps_10Be_model_data_antarctica_conc_and_flux.pdf', dpi=300)
+fig.savefig(cwd+'/fig07_maps_10Be_model_data_antarctica_conc_and_flux.pdf', dpi=300)

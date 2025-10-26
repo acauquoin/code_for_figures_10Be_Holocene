@@ -42,4 +42,4 @@ ax.legend([aicc, volcwd, volcsp], ['$^{14}$C age $-$ AICC', '$^{14}$C age $-$ $^
 plt.show()
 
 # save
-fig.savefig(cwd+'/fig05_age_diff_synchro_aicc_volcano.pdf', dpi=300)
+fig.savefig(cwd+'/fig06_age_diff_synchro_aicc_volcano.pdf', dpi=300)
