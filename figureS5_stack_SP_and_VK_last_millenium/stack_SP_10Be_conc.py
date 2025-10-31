@@ -3,6 +3,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
 import numpy as np
 import os
 
@@ -33,13 +34,21 @@ ax.set_xticks(np.arange(0, 1101, 100))
 ax.set_xticks(np.arange(0, 1101, 50), minor=True)
 ax.set_ylim(0.65, 1.55)
 ax.set_yticks(np.arange(0.7, 1.51, 0.1))
-#ax.set_yticks(np.arange(0.7, 1.51, 0.1), minor=True)
+#
+ax2 = ax.twiny()
+ax2.set_xticks(ax.get_xticks())
+ax2.set_xbound(ax.get_xbound())
+ax2.set_xticklabels([(1950-x) for x in ax.get_xticks()])
+ax2.xaxis.set_minor_locator(AutoMinorLocator(2))
+#
 ax.xaxis.set_tick_params(labelsize=12)
 ax.yaxis.set_tick_params(labelsize=12)
 ax.set_ylabel('$^{10}$Be concentration (normalized)', fontsize=16)
 ax.set_xlabel('Age (yr BP)', fontsize=16)
+ax2.xaxis.set_tick_params(labelsize=12)
+ax2.set_xlabel('Age (yr CE)', fontsize=16, labelpad=7)
 
-# added these three lines
+# legend
 lines, labels = ax.get_legend_handles_labels()
 ax.legend(ncol=3, handletextpad=0.5, fontsize=12, columnspacing=1.75, loc='upper right', borderaxespad=0.3)
 
