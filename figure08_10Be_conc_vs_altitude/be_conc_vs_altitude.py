@@ -110,8 +110,8 @@ for i in range(be_conc_elev.shape[0]):
     ax.plot([a, c], [b, d], c='black')
 #
 # annotations of the sites
-xpos_beconc_shift = [0, 150, -50, 320, 0, 200, 130, -160, 0, 110, 0]
-ypos_beconc_shift = [0.05, 0, 0.04, -0.06, 0.1, 0, -0.04, 0, 0.15, 0, -0.05]
+xpos_beconc_shift = [0, 150, -200, 320, 0, 200, 130, -160, 0, 110, 0]
+ypos_beconc_shift = [0.05, 0, -0.032, -0.06, 0.1, 0, -0.04, 0, 0.15, 0, -0.05]
 for i, label in enumerate(be_conc_elev.Site):
     txt = ax.annotate(label, (np.mean([be_conc_elev.zobs.iloc[i], be_conc_elev.zmod.iloc[i]])+xpos_beconc_shift[i], np.mean([be_conc_elev.concobs.iloc[i], be_conc_elev.concmod.iloc[i]])+ypos_beconc_shift[i]), fontsize=14, color='k', fontweight='bold', horizontalalignment='center', verticalalignment="center", zorder=600)
 #
